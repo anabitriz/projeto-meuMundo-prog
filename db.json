@@ -1,0 +1,12 @@
+{
+  "favoritos": [
+    {
+      "nome": "Brazil",
+      "capital": "Brasília",
+      "population": 213421037,
+      "bandeira": "https://flagcdn.com/w320/br.png",
+      "id": "fZgg96J2Bpc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
