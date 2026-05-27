@@ -28,8 +28,6 @@ export default function Login({ navigation }) {
 
       .then((userCredential) => {
 
-        alert("Login realizado!");
-
         navigation.navigate("Home");
 
       })
@@ -58,6 +56,10 @@ export default function Login({ navigation }) {
 
       <Text style={styles.title}>
         Conheça o Mundo
+      </Text>
+
+      <Text style={styles.subtitle}>
+        Explore. Descubra. Viaje.
       </Text>
 
       <TextInput
@@ -90,8 +92,10 @@ export default function Login({ navigation }) {
         onPress={() => navigation.navigate("Cadastro")}
       >
 
-        <Text style={styles.link}>
-          Não possui conta? Cadastre-se
+        <Text style={styles.link}> Não possui conta? 
+          <text style={styles.link2}>
+           Cadastre-se
+          </text>
         </Text>
 
       </TouchableOpacity>
@@ -125,9 +129,16 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     fontWeight: 'bold',
     color: '#1300c0',
+    fontFamily: ''
+  },
 
-    fontStyle: 'italic',
-    fontFamily: 'Montserrat'
+  subtitle: {
+    fontSize: 17,
+    textAlign: 'center',
+    marginBottom: 30,
+    fontWeight: 'bold',
+    color: '#3f3f3f',
+
   },
 
   input: {
@@ -136,7 +147,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     padding: 10,
     borderRadius: 15,
-    borderColor: '#1300c0',
+    borderColor: '#c4c4c4',
+    backgroundColor: "white"
   },
 
   botao: {
@@ -152,6 +164,12 @@ const styles = StyleSheet.create({
   },
 
   link: {
+    marginTop: 20,
+    textAlign: 'center',
+    color: 'black'
+  },
+
+  link2: {
     marginTop: 20,
     textAlign: 'center',
     color: 'blue'
