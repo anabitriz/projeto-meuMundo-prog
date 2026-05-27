@@ -1,15 +1,16 @@
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from "@react-navigation/native";
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import './firebaseConfig';
+import "./firebaseConfig";
 
-import Login from './screens/login';
-import Cadastro from './screens/cadastro';
-import Home from './screens/home';
-import Detalhes from './screens/detalhes';
-import Perfil from './screens/perfil';
-import Favoritos from './screens/favoritos';
+import Login from "./screens/login";
+import Cadastro from "./screens/cadastro";
+import Home from "./screens/home";
+import Detalhes from "./screens/detalhes";
+import Perfil from "./screens/perfil";
+import Favoritos from "./screens/favoritos";
+import AlterarFoto from "./screens/alterarFoto";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,11 @@ export default function App() {
 
     <NavigationContainer>
 
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+      >
 
         <Stack.Screen
           name="Login"
@@ -30,23 +35,31 @@ export default function App() {
           name="Cadastro"
           component={Cadastro}
         />
-        <Stack.Screen
-  name="Home"
-  component={Home}
-/>
 
-<Stack.Screen
-  name="Detalhes"
-  component={Detalhes}
-/>
-<Stack.Screen
-  name="Perfil"
-  component={Perfil}
-/>
-<Stack.Screen
-  name="Favoritos"
-  component={Favoritos}
-/>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+        />
+
+        <Stack.Screen
+          name="Detalhes"
+          component={Detalhes}
+        />
+
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+        />
+
+        <Stack.Screen
+          name="Favoritos"
+          component={Favoritos}
+        />
+
+        <Stack.Screen
+          name="AlterarFoto"
+          component={AlterarFoto}
+        />
 
       </Stack.Navigator>
 
